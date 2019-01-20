@@ -4,4 +4,154 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #3c3c3c;
+  min-height: 100vh;
+}
+body * {box-sizing: border-box;}
+img {
+  width: auto;
+  max-width: 100%;
+}
+h1, h2, h3 {
+  margin: 0;
+  text-transform: uppercase;
+}
+.wrapper { 
+  width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+header {
+  background: #c2cad6 url(../images/hero-bg.jpg) no-repeat 0 0; /*Добавили цвет, чтобы внизу была полоска цвета недостающая, чтобы показывало на весь экран наш хедер, без белгого фона*/
+  background-size: 100% auto;
+}
+header .wrapper {
+  height: 100vh; /* сделали чтобы на весь экран был хедер*/
+  padding: 0 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+header .wrapper h1 {
+  font-size: 54px;
+  padding: 70px 0 40px 0;
+  line-height: 60px;
+  letter-spacing: 8px;
+}
+header .wrapper p {
+  margin: 0;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 27px;
+}
+.scroll-to {
+  position: absolute;
+  left: 0;  /* left right margin - делаем это все для того чтобы отцентровать наш скролл*/
+  right: 0;
+  margin: 0 auto;
+  bottom: 5%;
+  width: 23px;
+}
+section {
+  padding: 150px 0;
+}
+.no-bg article{
+  border: 2px solid #000000;
+  border-top: none;
+}
+article h2 {
+  font-size: 34px;
+  letter-spacing: 8px;
+  position: relative;
+  top: -24px;
+}
+article h2::before, 
+article h2::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 2px;
+  background-color: #000000;
+  width: 240px;
+  top: 24px;
+}
+article h2::before{
+  left: 0;
+}
+article h2::after{
+  right: 0;
+}
+article p {
+  padding: 0 188px;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+section.bg-section {
+  background: url(../images/services.jpg) no-repeat 0 0;
+  padding: 130px 0;
+}
+@media screen and (min-width: 1920px) {
+  section.bg-section {
+    background-size: 100% auto;
+  }
+}
+.bg-section article{
+  border: 2px solid #ffffff;
+  border-top: none;
+  color: #ffffff;
+}
+.bg-section article h2::before,
+.bg-section article h2::after {
+  background-color: #ffffff;
+}
+.block {
+  padding-top: 95px;
+  font-size: 14px;
+}
+.product {
+  padding-bottom: 90px;
+}
+section .no-bg h3 {
+  letter-spacing: 3px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.contact {
+  border: none;
+  background-color: #3c3c3c;
+  color: #ffffff;
+  width: 396px;
+  height: 60px;
+  letter-spacing: 3px;
+}
+.no-bg article {
+  padding-bottom: 50px;
+}
+footer {
+  padding-bottom: 65px;
+}
+.flex-container {
+  display: flex;
+  font-size: 0;
+  margin-bottom: 6px;
+}
+.middle {
+  margin: 0 6px 0;
+}
+.flex-item {
+  position: relative;
+}
+.flex-item a {
+  position: absolute;
+  color: #ffffff;
+  font-size: 34px;
+  letter-spacing: 2px;
+  bottom: 15px;
+  left: 25px;
+  text-transform: uppercase;
+  text-decoration: none;
 }
